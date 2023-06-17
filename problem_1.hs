@@ -17,3 +17,14 @@ combineList (x:xs) (y:ys)
 
 
 realAnswer = [x | x <- [1..1000], mod x 3 == 0 || mod x 5 == 0]
+
+--Take two
+list = [1..999]
+
+divisible' :: [Integer] -> [Integer]
+divisible' [] = []
+divisible' (x:xs)
+ | mod x 3 == 0 || mod x 5 == 0    = x : divisible' xs 
+ | otherwise                       = divisible' xs
+
+
