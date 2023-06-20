@@ -6,7 +6,7 @@ findPrime composite sqrt=
 
 main :: IO ()
 main = do
-  let square = toInteger $ round $ sqrt 600851475143
-  let primeList = findPrime 600851475143 square
+  let square = toInteger $ ceiling $ sqrt 42
+  let primeList = findPrime 42 square
   print square
   print primeList
