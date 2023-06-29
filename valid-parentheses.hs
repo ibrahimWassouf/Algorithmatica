@@ -11,8 +11,6 @@ valid (x:xs) (y:ys)
  | x == '{'   = valid (xs) (x:y:ys)
  | x == '['   = valid xs (x:y:ys)
  | x == ')' && y == '('   = valid xs ys
- | x == ')' && y /= '('   = False
  | x == '}' && y == '{'   = valid xs ys
- | x == '}' && y /= '{'   = False
  | x == ']' && y == '['   = valid xs ys
  | otherwise              = False
