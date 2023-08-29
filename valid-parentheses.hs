@@ -1,6 +1,6 @@
 valid :: [Char] -> [Char] -> Bool
-valid [] [] = True
-valid [_] [] = False
+valid [] []    = True
+valid [_] []   = False
 valid [] (_:_) = False
 valid (x:z:xs) []
  | x == '('   = valid (z:xs) (x:[])
